@@ -1,6 +1,6 @@
 import express, { json } from 'express'
 import mongoose from 'mongoose'
-import { cors } from 'cors'
+import cors from 'cors'
 import * as authValidations from './validations/authValidations.js'
 import * as authControllers from './controllers/authControllers.js'
 import checkAuth from './utils/checkAuth.js'
