@@ -1,5 +1,6 @@
 import express, { json } from 'express'
 import mongoose from 'mongoose'
+import { cors } from 'cors'
 import * as authValidations from './validations/authValidations.js'
 import * as authControllers from './controllers/authControllers.js'
 import checkAuth from './utils/checkAuth.js'
@@ -7,6 +8,7 @@ import checkAuth from './utils/checkAuth.js'
 const app = express()
 
 app.use(json())
+app.use(cors())
 
 mongoose.connect('mongodb+srv://ibrohim:6d6Ufvgn0zmEHO76@cluster0.ckvdfoz.mongodb.net/kabutaruz').then(() => {
     console.log('normoldaki');
